@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindi Ayanda Mthiyane | Full-Stack Developer</title>
+    <meta name="description" content="Full-Stack Developer with 4+ years of experience building enterprise web applications">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo-link">
+                <div class="nav-avatar">SA</div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="cv.html" class="nav-link nav-cv-btn">Download CV</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-avatar">SA</div>
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Sindi Ayanda Mthiyane</h1>
+            <h2 class="hero-title">
+                <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+            </h2>
+            <p class="hero-description">
+                Full-Stack Developer with 4+ years of experience building scalable enterprise
+                web applications. I craft robust solutions using React, Node.js, Python, and PHP —
+                from call centre platforms to customer analytics dashboards.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="cv.html" class="btn btn-outline">Download CV</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/SindiAyanda" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/sindi-mthiyane-808678270" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:sindiayanda30@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Full-Stack Developer with over 4 years of hands-on experience
+                        designing, building, and maintaining production-grade web applications. I specialize
+                        in creating end-to-end solutions — from intuitive React frontends to robust
+                        backend APIs with Flask, Node.js, and PHP.
+                    </p>
+                    <p>
+                        At my current role, I've handedly architected and delivered multiple
+                        enterprise systems including a distributed call centre platform, customer payment
+                        analytics dashboards, and interactive promotional tools — all serving real business
+                        needs and handling live operations daily.
+                    </p>
+                    <p>
+                        Beyond software development, I also manage IT infrastructure — from Active Directory
+                        and Office 365 administration to leading a full Wi-Fi network upgrade with UniFi U7 Pro
+                        access points. I bring ideas to life with code and keep systems running smoothly.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Backend Languages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5 & CSS3</span>
+                        <span class="skill-tag">Material-UI</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Chart.js / Recharts</span>
+                        <span class="skill-tag">Leaflet Maps</span>
+                        <span class="skill-tag">React Router</span>
+                        <span class="skill-tag">Axios</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Python / Flask</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JWT Authentication</span>
+                        <span class="skill-tag">SQLAlchemy</span>
+                        <span class="skill-tag">Gunicorn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">PDO / PyMySQL</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">Apache / XAMPP</span>
+                        <span class="skill-tag">Cloudflare Pages</span>
+                        <span class="skill-tag">Sentry</span>
+                        <span class="skill-tag">Linux Server Admin</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>IT & Infrastructure</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">Office 365 Admin</span>
+                        <span class="skill-tag">Network Setup & Security</span>
+                        <span class="skill-tag">UniFi / Wi-Fi Management</span>
+                        <span class="skill-tag">VoIP Systems</span>
+                        <span class="skill-tag">Microsoft OAuth / SSO</span>
+                        <span class="skill-tag">Twilio / SMS Services</span>
+                        <span class="skill-tag">IT Asset Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Production applications I've built and maintain at my current role</p>
+
+            <div class="projects-grid">
+                <!-- Project 1: DCCMS -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-headset"></i></div>
+                        <span class="project-badge">Featured</span>
+                    </div>
+                    <h3 class="project-name">Distributed Call Centre Management System</h3>
+                    <p class="project-description">
+                        A comprehensive full-stack call centre platform managing agent operations,
+                        intelligent call routing, customer account creation, payment processing,
+                        and real-time analytics dashboards. Supports multi-role access (Agent, Admin,
+                        Supervisor) with background workers for call assignment algorithms and PDF generation.
+                    </p>
+                    <div class="project-features">
+                        <span><i class="fas fa-check"></i> Intelligent call routing & assignment</span>
+                        <span><i class="fas fa-check"></i> Real-time analytics dashboards</span>
+                        <span><i class="fas fa-check"></i> Role-based access control (5 roles)</span>
+                        <span><i class="fas fa-check"></i> Background workers & cron jobs</span>
+                        <span><i class="fas fa-check"></i> 3CX telephony integration</span>
+                        <span><i class="fas fa-check"></i> Audit logging & Sentry monitoring</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>React 19</span>
+                        <span>Material-UI 7</span>
+                        <span>Flask</span>
+                        <span>SQLAlchemy</span>
+                        <span>MySQL</span>
+                        <span>Gunicorn</span>
+                        <span>JWT</span>
+                        <span>Sentry</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: PayGo Customers -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <h3 class="project-name">PayGo Customer Analytics Platform</h3>
+                    <p class="project-description">
+                        A data-driven customer management application for monitoring prepaid energy
+                        payments, sales performance, and field operations. Features interactive dashboards
+                        with date-range filtering, GPS location tracking via Leaflet maps, Microsoft SSO
+                        authentication, and comprehensive reporting with Excel export.
+                    </p>
+                    <div class="project-features">
+                        <span><i class="fas fa-check"></i> Interactive analytics dashboards</span>
+                        <span><i class="fas fa-check"></i> GPS location tracking with Leaflet</span>
+                        <span><i class="fas fa-check"></i> Microsoft SSO authentication</span>
+                        <span><i class="fas fa-check"></i> Multi-period reporting & Excel export</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>React 18</span>
+                        <span>Material-UI 6</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Leaflet</span>
+                        <span>Recharts</span>
+                        <span>OAuth 2.0</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Spin to Win -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-gift"></i></div>
+                    </div>
+                    <h3 class="project-name">Spin & Win Promotional Platform</h3>
+                    <p class="project-description">
+                        An interactive promotional web application featuring a custom HTML5 Canvas
+                        spin wheel game. Customers verify their accounts, spin for prizes (vouchers,
+                        airtime, electricity tokens), and upload selfies. Includes an admin dashboard
+                        with Microsoft OAuth, analytics, and Airvoucher API integration for automated
+                        airtime delivery.
+                    </p>
+                    <div class="project-features">
+                        <span><i class="fas fa-check"></i> Custom HTML5 Canvas wheel animation</span>
+                        <span><i class="fas fa-check"></i> Server-side outcome determination</span>
+                        <span><i class="fas fa-check"></i> Airvoucher API integration</span>
+                        <span><i class="fas fa-check"></i> Admin dashboard with analytics</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML5 Canvas</span>
+                        <span>Vanilla JS</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MySQL</span>
+                        <span>OAuth 2.0</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Coordinate / PhotoBoom -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-solar-panel"></i></div>
+                    </div>
+                    <h3 class="project-name">PhotoBoom — Solar Installation Tracker</h3>
+                    <p class="project-description">
+                        A GPS-based solar installation verification system. Field agents upload photos
+                        of customer installations, and the app automatically extracts GPS coordinates
+                        from EXIF metadata. Features an interactive map dashboard, daily submission
+                        analytics, admin verification portal, and automated notifications via Twilio SMS
+                        and email.
+                    </p>
+                    <div class="project-features">
+                        <span><i class="fas fa-check"></i> Auto GPS extraction from photo EXIF</span>
+                        <span><i class="fas fa-check"></i> Interactive Leaflet map dashboard</span>
+                        <span><i class="fas fa-check"></i> Twilio SMS & email notifications</span>
+                        <span><i class="fas fa-check"></i> Admin verification portal</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>React 19</span>
+                        <span>Leaflet</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>EXIF.js</span>
+                        <span>Twilio</span>
+                        <span>JWT</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: CCMS -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-phone-volume"></i></div>
+                        <span class="project-badge badge-maintain">Maintaining</span>
+                    </div>
+                    <h3 class="project-name">Call Centre Management System (CCMS)</h3>
+                    <p class="project-description">
+                        A call centre operations platform I maintain, featuring call logging,
+                        bulk CSV import, performance analytics, and role-based access for operators,
+                        analysts, and admins. Includes reporting on call duration trends, peak hours,
+                        and call type distribution with CSV export capabilities.
+                    </p>
+                    <div class="project-features">
+                        <span><i class="fas fa-check"></i> Call logging with follow-up tracking</span>
+                        <span><i class="fas fa-check"></i> Bulk CSV import</span>
+                        <span><i class="fas fa-check"></i> Analytics & reporting dashboards</span>
+                        <span><i class="fas fa-check"></i> Role-based access (3 roles)</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>React 18</span>
+                        <span>Vite</span>
+                        <span>Material-UI 5</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Chart.js</span>
+                        <span>JWT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- Current Role -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Full-Stack Developer & IT Technician</h3>
+                            <span class="timeline-company">Kukhanya Energy Services</span>
+                        </div>
+                        <span class="timeline-date">Oct 2021 — Present &nbsp;|&nbsp; Durban, South Africa</span>
+
+                        <p class="timeline-subtitle">Software Development</p>
+                        <ul class="timeline-list">
+                            <li>Architected and built a Distributed Call Centre Management System from scratch — handling agent routing, real-time dashboards, payment processing, and 5+ user roles (React + Flask + MySQL)</li>
+                            <li>Developed a PayGo Customer Analytics platform with GPS tracking, Microsoft SSO, and multi-period reporting serving operational teams daily</li>
+                            <li>Created an interactive Spin & Win promotional platform with custom HTML5 Canvas animations and Airvoucher API integration</li>
+                            <li>Built PhotoBoom — a solar installation tracker using EXIF GPS extraction, Leaflet maps, and Twilio SMS notifications</li>
+                            <li>Maintained and enhanced an existing Call Centre Management System, improving reliability and adding reporting features</li>
+                            <li>Implemented RESTful APIs, JWT auth, RBAC, input sanitization, and audit logging across all projects</li>
+                        </ul>
+
+                        <p class="timeline-subtitle">IT Infrastructure & Systems</p>
+                        <ul class="timeline-list">
+                            <li>Led a full Wi-Fi network upgrade using UniFi U7 Pro access points with structured cabling across two office floors — achieving 100+ Mbps consistent speeds</li>
+                            <li>Designed and implemented a wireless bridge solution connecting main office and warehouse</li>
+                            <li>Managed IT infrastructure relocation across 11 offices — servers, routers, switches, and cabling</li>
+                            <li>Administered Active Directory, Office 365, Teams, OneDrive, and VoIP systems for the organization</li>
+                            <li>Oversaw IT asset procurement, license renewals, inventory tracking, and vendor management</li>
+                            <li>Delivered technical support for desktops, laptops, mobile devices, printers, and network equipment</li>
+                            <li>Developed user manuals, technical documentation, and conducted staff training on systems and cybersecurity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Computer Systems In-Service Trainee</h3>
+                            <span class="timeline-company">Kukhanya Energy Services</span>
+                        </div>
+                        <span class="timeline-date">Sep 2020 — Sep 2021 &nbsp;|&nbsp; Durban, South Africa</span>
+                        <ul class="timeline-list">
+                            <li>Contributed to web development tasks, building and improving the company's online presence</li>
+                            <li>Provided technical support — repairing and replacing faulty base units/meters, troubleshooting hardware/software issues</li>
+                            <li>Gained hands-on experience in soldering, desoldering, and repair of solar panels</li>
+                            <li>Provided network monitoring and support, ensuring uptime and performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>National Diploma in Computer Systems</h3>
+                            <span class="timeline-company">Durban University of Technology</span>
+                        </div>
+                        <span class="timeline-date">2017 — 2021 &nbsp;|&nbsp; Durban, South Africa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+                I'm always open to new opportunities and interesting projects. Let's connect!
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:sindiayanda30@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>sindiayanda30@gmail.com</p>
+                </a>
+                <a href="https://linkedin.com/in/sindi-mthiyane-808678270" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin-in"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Sindi Mthiyane</p>
+                </a>
+                <a href="https://github.com/SindiAyanda" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>github.com/SindiAyanda</p>
+                </a>
+                <a href="tel:+27630482252" class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+27 63 048 2252</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sindi Ayanda Mthiyane. Built with passion and clean code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

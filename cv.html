@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Sindi Ayanda Mthiyane | Full-Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #2563eb;
+            --bg: #0a0a0f;
+            --bg-page: #fff;
+            --text: #111827;
+            --text-light: #4b5563;
+            --text-muted: #6b7280;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .cv-actions {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .cv-actions a, .cv-actions button {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-back {
+            background: rgba(255,255,255,0.06);
+            color: #f0f0f5;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-back:hover { border-color: rgba(255,255,255,0.25); }
+
+        .btn-print {
+            background: linear-gradient(135deg, #6c63ff, #00d4aa);
+            color: white;
+        }
+        .btn-print:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(108,99,255,0.4); }
+
+        /* ===== ATS-Friendly CV Layout ===== */
+        .cv-page {
+            max-width: 800px;
+            margin: 80px auto 40px;
+            background: var(--bg-page);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            padding: 48px 52px;
+        }
+
+        /* Header — Simple, left-aligned for ATS */
+        .cv-name {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .cv-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .cv-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--text);
+        }
+
+        .cv-contact span {
+            white-space: nowrap;
+        }
+
+        .cv-contact a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        /* Sections */
+        .cv-section {
+            margin-bottom: 22px;
+        }
+
+        .cv-section:last-child { margin-bottom: 0; }
+
+        .cv-section h2 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text);
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid var(--border);
+            margin-bottom: 12px;
+        }
+
+        /* Summary */
+        .cv-summary {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.65;
+        }
+
+        /* Experience entries */
+        .cv-entry {
+            margin-bottom: 18px;
+        }
+        .cv-entry:last-child { margin-bottom: 0; }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 2px;
+        }
+
+        .cv-entry-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .cv-entry-date {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .cv-entry-company {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .cv-entry-subtitle {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .cv-entry ul {
+            padding-left: 18px;
+            list-style: disc;
+        }
+
+        .cv-entry li {
+            font-size: 0.84rem;
+            color: var(--text-light);
+            line-height: 1.55;
+            margin-bottom: 3px;
+        }
+
+        /* Skills — simple inline for ATS */
+        .cv-skills-list {
+            margin-bottom: 8px;
+        }
+
+        .cv-skills-list strong {
+            font-size: 0.84rem;
+            color: var(--text);
+        }
+
+        .cv-skills-list span {
+            font-size: 0.84rem;
+            color: var(--text-light);
+        }
+
+        /* Projects — simple list for ATS */
+        .cv-project-entry {
+            margin-bottom: 12px;
+        }
+        .cv-project-entry:last-child { margin-bottom: 0; }
+
+        .cv-project-entry h3 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .cv-project-entry p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.55;
+            margin-bottom: 2px;
+        }
+
+        .cv-project-entry .cv-tech-line {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Education */
+        .cv-edu-entry {
+            margin-bottom: 8px;
+        }
+        .cv-edu-entry:last-child { margin-bottom: 0; }
+
+        .cv-edu-entry h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .cv-edu-entry p {
+            font-size: 0.84rem;
+            color: var(--text-light);
+        }
+
+        .cv-edu-entry .cv-entry-date {
+            font-size: 0.8rem;
+        }
+
+        /* ===== Print Styles ===== */
+        @media print {
+            body { background: white; }
+            .cv-actions { display: none; }
+            .cv-page {
+                margin: 0;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 36px 44px;
+            }
+            @page { margin: 0.4in 0; size: A4; }
+            .cv-entry { break-inside: avoid; }
+            .cv-project-entry { break-inside: avoid; }
+        }
+
+        @media (max-width: 600px) {
+            .cv-page { padding: 28px 24px; }
+            .cv-name { font-size: 1.6rem; }
+            .cv-entry-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-actions">
+        <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        <button class="btn-print" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+    </div>
+
+    <div class="cv-page">
+        <!-- Header -->
+        <h1 class="cv-name">Sindi Ayanda Mthiyane</h1>
+        <div class="cv-title">Full-Stack Developer</div>
+        <div class="cv-contact">
+            <span>sindiayanda30@gmail.com</span>
+            <span>063 048 2252 / 082 717 9918</span>
+            <span>Durban, KwaZulu-Natal</span>
+            <span><a href="https://linkedin.com/in/sindi-mthiyane-808678270">linkedin.com/in/sindi-mthiyane-808678270</a></span>
+            <span><a href="https://github.com/SindiAyanda">github.com/SindiAyanda</a></span>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="cv-section">
+            <h2>Professional Summary</h2>
+            <p class="cv-summary">
+                Versatile Full-Stack Developer and IT professional with 4+ years of experience architecting
+                and delivering enterprise web applications while managing IT infrastructure. Proven ability to
+                independently design, build, and deploy full-stack solutions using React, Flask, Node.js, PHP,
+                and MySQL. Experienced in IT systems administration, network management, and production deployment
+                with Nginx and Gunicorn. Passionate about continuous learning and delivering scalable systems
+                that improve business operations.
+            </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="cv-section">
+            <h2>Technical Skills</h2>
+            <div class="cv-skills-list">
+                <strong>Frontend: </strong><span>React, JavaScript (ES6+), TypeScript, HTML5, CSS3, Material-UI, Bootstrap, Chart.js, Recharts, Leaflet Maps, Axios, React Router</span>
+            </div>
+            <div class="cv-skills-list">
+                <strong>Backend: </strong><span>Node.js, Express.js, Python, Flask, PHP, Laravel, REST APIs, JWT Authentication, SQLAlchemy, Gunicorn</span>
+            </div>
+            <div class="cv-skills-list">
+                <strong>Database & DevOps: </strong><span>MySQL, SQL Server, PDO, PyMySQL, Git, GitHub, Nginx, Apache, Linux Server Administration, Cloudflare Pages, Sentry</span>
+            </div>
+            <div class="cv-skills-list">
+                <strong>IT & Infrastructure: </strong><span>Active Directory, Office 365, Windows 10/11, Network Setup & Security, UniFi, VoIP Systems, IT Asset Management, Postman</span>
+            </div>
+            <div class="cv-skills-list">
+                <strong>Soft Skills: </strong><span>Analytical Thinking, Communication, Documentation, Training, Independent Project Management</span>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="cv-section">
+            <h2>Professional Experience</h2>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-entry-title">IT Technician & Full-Stack Developer</span>
+                    <span class="cv-entry-date">Oct 2021 — Present</span>
+                </div>
+                <div class="cv-entry-company">Kukhanya Energy Services — Durban, South Africa</div>
+
+                <div class="cv-entry-subtitle">Software Development & Web Projects</div>
+                <ul>
+                    <li>Designed and built a Distributed Call Centre Management System (DCCMS) from scratch — a full-stack platform with React 19, Flask, and MySQL handling call routing, agent management, payment processing, and real-time analytics for 5+ user roles</li>
+                    <li>Developed a PayGo Customer Analytics Platform with interactive dashboards, GPS location tracking (Leaflet), Microsoft SSO authentication, and multi-period financial reporting with Excel export</li>
+                    <li>Created an interactive Spin & Win promotional application using custom HTML5 Canvas animations, server-side outcome logic, and Airvoucher API integration for automated prize delivery</li>
+                    <li>Built PhotoBoom — a solar installation verification system with automatic GPS extraction from photo EXIF metadata, interactive Leaflet mapping, and Twilio SMS/email notifications</li>
+                    <li>Maintained and improved an existing Call Centre Management System (CCMS), adding new reporting features and optimizing performance</li>
+                    <li>Implemented RESTful APIs, JWT authentication, role-based access control, input sanitization (DOMPurify), CORS, rate limiting, and comprehensive audit logging across all projects</li>
+                    <li>Deployed and managed production applications on Linux servers using Nginx, Gunicorn, Cloudflare, and Sentry error monitoring</li>
+                </ul>
+
+                <div class="cv-entry-subtitle">IT Systems & Network Management</div>
+                <ul>
+                    <li>Led a full Wi-Fi network upgrade using UniFi U7 Pro access points with structured cabling, achieving consistent 100+ Mbps speeds across two office floors</li>
+                    <li>Designed and implemented a wireless bridge solution connecting main office and warehouse for internet and telephony</li>
+                    <li>Planned and managed IT infrastructure relocation across 11 offices — servers, routers, switches, and cabling</li>
+                    <li>Administered Active Directory, Office 365, Teams, OneDrive, Outlook, and VoIP systems for the organization</li>
+                    <li>Oversaw IT asset procurement, license renewals, inventory tracking, and vendor management</li>
+                    <li>Delivered remote and on-site technical support for desktops, laptops, mobile devices, printers, and network equipment</li>
+                    <li>Developed user manuals, technical documentation, and conducted staff training on systems and cybersecurity best practices</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-entry-title">Computer Systems In-Service Trainee</span>
+                    <span class="cv-entry-date">Sep 2020 — Sep 2021</span>
+                </div>
+                <div class="cv-entry-company">Kukhanya Energy Services — Durban, South Africa</div>
+                <ul>
+                    <li>Contributed to web development tasks, building and improving the company's online presence</li>
+                    <li>Provided technical support — repairing and replacing faulty base units/meters, troubleshooting hardware and software issues</li>
+                    <li>Gained hands-on experience in soldering, desoldering, and repair of solar panels</li>
+                    <li>Provided network monitoring and support, ensuring uptime and performance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="cv-section">
+            <h2>Key Projects</h2>
+
+            <div class="cv-project-entry">
+                <h3>Distributed Call Centre Management System (DCCMS)</h3>
+                <p>Enterprise call centre platform with intelligent call routing, agent management, payment processing, real-time analytics dashboards, background workers, and 3CX telephony integration. Serves 5+ user roles with full audit logging.</p>
+                <p class="cv-tech-line">Tech: React 19, Material-UI 7, Flask, SQLAlchemy, MySQL, Gunicorn, JWT, Sentry</p>
+            </div>
+
+            <div class="cv-project-entry">
+                <h3>PayGo Customer Analytics Platform</h3>
+                <p>Data-driven customer management application with interactive dashboards, GPS location tracking, Microsoft SSO, and multi-period reporting for prepaid energy payment monitoring.</p>
+                <p class="cv-tech-line">Tech: React 18, Material-UI 6, PHP, MySQL, Leaflet, Recharts, OAuth 2.0</p>
+            </div>
+
+            <div class="cv-project-entry">
+                <h3>Spin & Win Promotional Platform</h3>
+                <p>Interactive prize wheel with custom HTML5 Canvas animations, server-side outcome determination, admin dashboard with analytics, and Airvoucher API integration for automated airtime delivery.</p>
+                <p class="cv-tech-line">Tech: HTML5 Canvas, Vanilla JavaScript, Node.js, Express, MySQL, OAuth 2.0</p>
+            </div>
+
+            <div class="cv-project-entry">
+                <h3>PhotoBoom — Solar Installation Tracker</h3>
+                <p>GPS-based installation verification system with automatic EXIF coordinate extraction, interactive Leaflet maps, admin verification portal, and Twilio SMS/email notifications.</p>
+                <p class="cv-tech-line">Tech: React 19, PHP, MySQL, Leaflet, EXIF.js, Twilio, JWT</p>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="cv-section">
+            <h2>Education</h2>
+            <div class="cv-edu-entry">
+                <h3>National Diploma in Computer Systems</h3>
+                <p>Durban University of Technology</p>
+                <span class="cv-entry-date">2017 — 2021 | Durban, South Africa</span>
+            </div>
+            <div class="cv-edu-entry">
+                <h3>National Senior Certificate</h3>
+                <p>Aquadene Secondary School</p>
+                <span class="cv-entry-date">2012 — 2016 | Richards Bay, South Africa</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
