@@ -20,46 +20,6 @@ if (themeToggle) {
     });
 }
 
-// ===== Typing Effect =====
-const typedTexts = [
-    'Full-Stack Developer',
-    'React & Node.js Expert',
-    'Python / Flask Developer',
-    'PHP Backend Developer',
-    'Problem Solver'
-];
-
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const typedElement = document.getElementById('typedText');
-
-function typeEffect() {
-    const currentText = typedTexts[textIndex];
-    if (isDeleting) {
-        typedElement.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typedElement.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-    }
-
-    let speed = isDeleting ? 40 : 80;
-
-    if (!isDeleting && charIndex === currentText.length) {
-        speed = 2000;
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % typedTexts.length;
-        speed = 400;
-    }
-
-    setTimeout(typeEffect, speed);
-}
-
-typeEffect();
-
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
 
@@ -134,7 +94,7 @@ function animateCounters() {
 // ===== Scroll Reveal =====
 const revealElements = document.querySelectorAll(
     '.section-title, .section-subtitle, .about-text, .about-stats, ' +
-    '.skill-category, .project-card, .timeline-item, .contact-card'
+    '.skill-category, .project-card, .timeline-item, .education-card, .contact-card'
 );
 
 revealElements.forEach(el => el.classList.add('reveal'));
@@ -158,48 +118,17 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// ===== Scroll Progress Bar + Back to Top =====
-const scrollProgress = document.getElementById('scrollProgress');
+// ===== Back to Top =====
 const backToTop = document.getElementById('backToTop');
 
-function onScrollExtras() {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    if (scrollProgress) scrollProgress.style.width = pct + '%';
-    if (backToTop) backToTop.classList.toggle('visible', scrollTop > 600);
-}
-
-window.addEventListener('scroll', onScrollExtras);
-onScrollExtras();
+window.addEventListener('scroll', () => {
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 600);
+});
 
 if (backToTop) {
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-}
-
-// ===== Proficiency Bars =====
-let proficiencyAnimated = false;
-
-function animateProficiency() {
-    document.querySelectorAll('.proficiency-fill').forEach(fill => {
-        fill.style.width = fill.getAttribute('data-level') + '%';
-    });
-}
-
-const proficiencyGrid = document.querySelector('.proficiency-grid');
-if (proficiencyGrid) {
-    const profObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !proficiencyAnimated) {
-                proficiencyAnimated = true;
-                animateProficiency();
-                profObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-    profObserver.observe(proficiencyGrid);
 }
 
 // ===== Contact Form =====
