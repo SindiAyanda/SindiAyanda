@@ -1,7 +1,7 @@
 /* ===== Design Tokens — Light (default) ===== */
 :root {
     --bg-primary: #ffffff;
-    --bg-secondary: #f6f6f7;
+    --bg-secondary: #e2e2e7;
     --bg-card: #ffffff;
     --bg-card-hover: #ffffff;
     --border-color: #e6e6e9;
@@ -90,7 +90,8 @@ ul {
     z-index: 1000;
     padding: 18px 0;
     transition: var(--transition);
-    background: transparent;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navbar.scrolled {
@@ -220,6 +221,7 @@ ul {
     justify-content: center;
     position: relative;
     padding: 140px 24px 100px;
+    background: var(--bg-secondary);
 }
 
 .hero-content {
