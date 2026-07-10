@@ -527,6 +527,9 @@ ul {
 }
 
 .skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     padding: 6px 14px;
     background: transparent;
     border: 1px solid var(--border-color);
@@ -541,6 +544,29 @@ ul {
     border-color: var(--text-primary);
     color: var(--text-primary);
 }
+
+.skill-tag i {
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Font Awesome stands in for tech with no official Devicon logo */
+.skill-tag i.fas,
+.skill-tag i.fab {
+    font-size: 0.88rem;
+    color: var(--accent);
+}
+
+/* Brand colors that fail contrast against the dark card background */
+[data-theme="dark"] .skill-tag i.devicon-express-original.colored { color: #d4d4d8; }
+[data-theme="dark"] .skill-tag i.devicon-sqlalchemy-plain.colored { color: #c8c8d0; }
+[data-theme="dark"] .skill-tag i.devicon-sentry-original.colored { color: #a191e0; }
+[data-theme="dark"] .skill-tag i.devicon-linux-plain.colored { color: #f0f0f2; }
+
+/* Brand yellows that wash out against the light card background */
+[data-theme="light"] .skill-tag i.devicon-javascript-plain.colored { color: #b8a012; }
+[data-theme="light"] .skill-tag i.devicon-python-plain.colored { color: #b58900; }
 
 /* ===== Projects ===== */
 .projects-grid {
