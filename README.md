@@ -194,7 +194,7 @@ SOP processes, and SIM/router checkouts.
 
 ## Education & Certifications
 
-🎓 **National Diploma in Computer Systems** — Durban University of Technology (2017 – 2021)
+🎓 **National Diploma in Engineering: Computer Systems** — Durban University of Technology, Faculty of Engineering (2017 – 2021)
 📜 **Network Engineering** — Brainnest, Professional Certificate
 
 ### Cloud Certifications — In Progress
