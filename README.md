@@ -2,7 +2,8 @@
 
 <p align="center">
   <strong>Full-Stack Developer</strong> · Durban, KwaZulu-Natal, South Africa<br>
-  Building production web applications end-to-end — database design through deployment.
+  React · Node.js · Python/Flask · PHP · MySQL · REST APIs · Linux<br>
+  <em>Building production web applications end-to-end — relational schema design through deployment.</em>
 </p>
 
 <p align="center">
@@ -28,10 +29,11 @@ I'm a Full-Stack Developer with **4+ years** of experience designing, building, 
 production web applications at **Kukhanya Energy Services**, a prepaid energy provider in
 South Africa.
 
-- 🏗️ I own the full software lifecycle — requirements, database design, frontend, APIs, deployment, and maintenance
+- 🏗️ I own the full **SDLC** — requirements gathering, relational schema design and normalisation, component-driven frontends, RESTful API development, deployment, and maintenance
 - ⚡ My systems run in **live daily operations**: a distributed call centre platform, customer analytics dashboards, and field-ops tooling
-- 🔐 I build with security in mind — JWT auth, role-based access control, AES-256-GCM encryption at rest, CSRF protection, and full audit logging
-- 🛠️ I also run the IT infrastructure side: Active Directory, Microsoft 365, UniFi networks, VoIP, and Linux servers
+- 🔐 **Application security** is baked in — JWT authentication, role-based access control (RBAC), AES-256-GCM encryption at rest, CSRF protection, parameterised queries against SQL injection, input sanitisation, and immutable audit trails
+- ⚙️ **Backend depth** — ORM-backed data access (SQLAlchemy, PDO), WSGI deployment via Gunicorn behind Nginx reverse proxy, asynchronous background workers, cron-scheduled jobs, and server-side PDF/Excel generation
+- 🛠️ I also run **IT infrastructure**: Active Directory, Microsoft 365 tenant administration, UniFi wireless networks, structured cabling, VoIP telephony, and Linux server administration
 - ☁️ Currently studying for **Microsoft Azure Fundamentals (AZ-900)**, and completed training toward **AWS Certified Cloud Practitioner**
 - 📚 Also sharpening: TypeScript, system design, and performance engineering
 
@@ -75,6 +77,22 @@ South Africa.
 
 ---
 
+## Core Competencies
+
+| Domain | Capabilities |
+|---|---|
+| **Architecture & Design** | Full-stack architecture · Layered/separation-of-concerns design · MVC · Client–server architecture · Single-page applications (SPA) · Component-based UI · Schema-driven interfaces · Relational data modelling & normalisation |
+| **API Engineering** | RESTful API design · JSON request/response contracts · HTTP verb & status-code semantics · Resource versioning · Server-side pagination & filtering · Third-party API integration (Twilio, Airvoucher, 3CX) · Webhook handling |
+| **Authentication & Security** | JWT (access/refresh tokens) · OAuth 2.0 · OpenID Connect (OIDC) · Microsoft Entra ID / Azure AD SSO · Role-based access control (RBAC) · AES-256-GCM encryption at rest · Password hashing · CSRF tokens · XSS & SQL-injection mitigation · Session management · Audit logging |
+| **Databases** | MySQL · Microsoft SQL Server · Schema design & normalisation · Indexing · Joins & aggregate queries · Stored procedures · Transactions · ORM (SQLAlchemy) · Prepared statements (PDO, PyMySQL) · Migrations · Backup & recovery |
+| **Frontend** | React (hooks, context, custom hooks) · State management · React Router · Axios · Responsive & mobile-first CSS · Flexbox & Grid · Material-UI · Data visualisation (Chart.js, Recharts) · Geospatial mapping (Leaflet) · Accessibility (ARIA) · Cross-browser compatibility |
+| **Backend & Runtime** | Node.js · Express middleware · Python · Flask blueprints · PHP 8 (OOP) · Laravel · WSGI/Gunicorn · Nginx reverse proxy · Apache virtual hosts · Background workers · Cron scheduling · File upload & EXIF metadata parsing · PDF & Excel report generation |
+| **DevOps & Operations** | Git version control · Branching & code review · Linux server administration (Ubuntu) · Deployment & release management · Environment configuration & secrets handling · SSL/TLS certificates · Error monitoring & alerting (Sentry) · Log analysis · Performance tuning · Incident troubleshooting |
+| **IT Infrastructure** | Active Directory · Microsoft 365 / Exchange administration · Group Policy · DNS & DHCP · TCP/IP · Subnetting · VLANs · UniFi wireless (AP provisioning, site surveys) · Wireless bridging · Structured cabling · VoIP/SIP telephony · Firewall & endpoint security · IT asset lifecycle management |
+| **Practices** | Requirements gathering & stakeholder liaison · Technical documentation · User manuals & SOPs · End-user training · Debugging & root-cause analysis · Production support · Vendor management |
+
+---
+
 ## Featured Work
 
 > These are enterprise systems built for my employer and run on private infrastructure, so the
@@ -83,30 +101,47 @@ South Africa.
 
 ### 📞 Distributed Call Centre Management System
 A full-stack platform managing agent operations, intelligent call routing, customer account
-creation, payment processing, and real-time analytics — with 5+ user roles, background workers
-for the assignment algorithm, and 3CX telephony integration.
+creation, payment processing, and real-time analytics dashboards.
+
+- **Architecture:** React SPA consuming a Flask REST API, SQLAlchemy ORM over a normalised MySQL schema, served by Gunicorn (WSGI) behind Nginx
+- **Call distribution:** background worker processes running a queue-based assignment algorithm, with cron-scheduled batch jobs for reporting and PDF generation
+- **Access control:** JWT-based authentication with refresh tokens and RBAC across 5+ roles (Agent, Supervisor, Admin), enforced at both route and query level
+- **Integrations:** 3CX telephony (CTI), payment processing, and Sentry for exception tracking and release health
+- **Observability:** structured application logging and immutable audit trails on every state-changing action
 
 `React 19` `Material-UI 7` `Flask` `SQLAlchemy` `MySQL` `Gunicorn` `JWT` `Sentry`
 
 ### 📊 PayGo Customer Analytics Platform
-A data-driven customer management app for monitoring prepaid energy payments, sales performance,
-and field operations — interactive dashboards with date-range filtering, GPS tracking on Leaflet
-maps, Microsoft SSO, and multi-period reporting with Excel export.
+A data-driven customer management application for monitoring prepaid energy payments, sales
+performance, and field operations.
+
+- **Analytics layer:** aggregate SQL queries (GROUP BY, window-style period comparisons) surfaced through Recharts visualisations with server-side date-range filtering and pagination
+- **Geospatial:** customer and agent GPS coordinates rendered as clustered Leaflet map layers
+- **Identity:** Microsoft Entra ID single sign-on over OAuth 2.0 authorisation-code flow, with an email-domain allowlist
+- **Reporting:** multi-period comparison reports with server-generated Excel (XLSX) export
 
 `React 18` `Material-UI 6` `PHP` `MySQL` `Leaflet` `Recharts` `OAuth 2.0`
 
 ### ☀️ PhotoBoom — Solar Installation Tracker
-A GPS-based installation verification system. Field agents upload photos and the app extracts
-coordinates straight from EXIF metadata, plots them on an interactive map dashboard, and fires
-automated Twilio SMS and email notifications to the admin verification portal.
+A GPS-based installation verification system for field agents.
+
+- **EXIF pipeline:** client-side image upload with server-side EXIF metadata parsing to extract GPS latitude/longitude, converting DMS coordinates to decimal degrees
+- **Mapping:** extracted coordinates plotted as interactive Leaflet markers with daily submission analytics
+- **Notifications:** event-driven Twilio SMS gateway integration plus SMTP email dispatch on submission and verification
+- **Workflow:** admin verification portal with JWT-protected endpoints and approval state machine
 
 `React 19` `Leaflet` `PHP` `MySQL` `EXIF.js` `Twilio` `JWT`
 
 ### 🗄️ IT Administrator — Asset & Operations Manager
-An internal platform tracking hardware assets, Microsoft 365 licenses, orders, printers, vendors,
-SOP processes, and SIM/router checkouts. Rebuilt from a single-file prototype into a layered
-PHP 8 + MySQL application with **AES-256-GCM encryption at rest on every record**, Entra SSO,
-a schema-driven UI, and a JSON REST API.
+An internal platform tracking hardware assets, Microsoft 365 licences, orders, printers, vendors,
+SOP processes, and SIM/router checkouts.
+
+- **Refactor:** rebuilt a single-file prototype into a layered PHP 8 OOP application with separated routing, service, and data-access layers
+- **Cryptography:** **AES-256-GCM authenticated encryption at rest** on every record via OpenSSL, with per-record initialisation vectors and auth tags
+- **Identity:** Microsoft Entra ID OIDC sign-in with an email allowlist
+- **Data access:** PDO prepared statements throughout, eliminating SQL-injection surface
+- **Interface:** schema-driven CRUD UI generated from table metadata, backed by a JSON REST API
+- **Hardening:** CSRF token validation, output escaping against XSS, and full audit logging; SOP checklists with PDF export
 
 `PHP 8` `MySQL` `PDO` `AES-256-GCM` `OIDC SSO` `Apache`
 
@@ -117,13 +152,25 @@ a schema-driven UI, and a JSON REST API.
 **Full-Stack Developer & IT Technician** — Kukhanya Energy Services
 *Oct 2021 – Present · Durban, South Africa*
 
-Architected and shipped four production systems used daily across the business, implemented
-RESTful APIs with JWT auth and RBAC throughout, and led the company's Wi-Fi network upgrade
-(UniFi U7 Pro, structured cabling, two floors) plus an IT infrastructure relocation across
-11 offices.
+*Software engineering*
+- Architected and shipped four production systems used daily across the business, owning the full stack from relational schema design through frontend delivery and deployment
+- Implemented RESTful API layers with JWT authentication, RBAC, input validation, and audit logging as a consistent pattern across all projects
+- Integrated third-party services: 3CX telephony (CTI), Twilio SMS gateway, Airvoucher, and Microsoft Graph / Entra ID
+- Deployed and maintained Linux application servers running Gunicorn/WSGI and Apache, with Sentry error monitoring and log-based incident triage
+
+*IT infrastructure*
+- Led a full wireless network upgrade — UniFi U7 Pro access point provisioning, RF site survey, and structured cabling across two floors, achieving sustained 100+ Mbps throughput
+- Designed and commissioned a point-to-point wireless bridge linking the main office to the warehouse
+- Managed an IT infrastructure relocation across 11 offices, covering servers, routers, switches, and cabling with minimal downtime
+- Administered Active Directory, Group Policy, Microsoft 365 / Exchange, Teams, OneDrive, and VoIP/SIP telephony
+- Authored technical documentation, user manuals, and SOPs; delivered end-user training on systems and cybersecurity awareness
 
 **Computer Systems In-Service Trainee** — Kukhanya Energy Services
 *Sep 2020 – Sep 2021 · Durban, South Africa*
+
+- Contributed to web development and hardware/software fault diagnosis on prepaid base units and meters
+- Performed component-level repair (soldering/desoldering) on solar panel assemblies
+- Provided network monitoring and uptime support
 
 ---
 
