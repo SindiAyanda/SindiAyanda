@@ -155,6 +155,15 @@ SOP processes, and SIM/router checkouts.
 
 ---
 
+## Ways of Working
+
+- **Requirements & stakeholder engagement** — I gather requirements directly from business stakeholders and end users, translating operational needs into technical scope
+- **Team collaboration** — I collaborate with and support team members across shared projects, and conduct code reviews
+- **Legacy systems** — I own institutional knowledge of legacy systems, maintaining, extending, and incrementally modernising inherited codebases
+- **Knowledge transfer** — I produce technical documentation, user manuals, and SOPs, and deliver end-user training
+
+---
+
 ## Experience
 
 **Full-Stack Developer & IT Technician** — Kukhanya Energy Services
