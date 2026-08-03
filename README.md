@@ -6,8 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="https://sindiayanda.github.io/SindiAyanda/">
-    <img src="https://img.shields.io/badge/Portfolio-Visit-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
+  <a href="https://sindi-mthiyane.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-Visit-2563EB?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio">
   </a>
   <a href="https://linkedin.com/in/sindi-mthiyane-808678270">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
@@ -15,7 +15,7 @@
   <a href="mailto:sindiayanda30@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
-  <a href="https://sindiayanda.github.io/SindiAyanda/cv.html">
+  <a href="https://sindi-mthiyane.vercel.app/cv.html">
     <img src="https://img.shields.io/badge/CV-Download-16A34A?style=for-the-badge&logo=readdotcv&logoColor=white" alt="CV">
   </a>
 </p>
@@ -78,7 +78,7 @@ South Africa.
 
 > These are enterprise systems built for my employer and run on private infrastructure, so the
 > source is not public. Full write-ups with screenshots live on my
-> **[portfolio site](https://sindiayanda.github.io/SindiAyanda/#projects)**.
+> **[portfolio site](https://sindi-mthiyane.vercel.app/#projects)**.
 
 ### 📞 Distributed Call Centre Management System
 A full-stack platform managing agent operations, intelligent call routing, customer account
@@ -139,7 +139,7 @@ I'm open to full-stack roles and interesting projects.
 
 | | |
 |---|---|
-| 🌐 **Portfolio** | [sindiayanda.github.io/SindiAyanda](https://sindiayanda.github.io/SindiAyanda/) |
+| 🌐 **Portfolio** | [sindi-mthiyane.vercel.app](https://sindi-mthiyane.vercel.app/) |
 | 💼 **LinkedIn** | [Sindi Mthiyane](https://linkedin.com/in/sindi-mthiyane-808678270) |
 | ✉️ **Email** | [sindiayanda30@gmail.com](mailto:sindiayanda30@gmail.com) |
 | 📍 **Location** | Durban, KwaZulu-Natal, South Africa |
