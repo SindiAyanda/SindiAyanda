@@ -2,7 +2,6 @@
 
 <p align="center">
   <strong>Full-Stack Developer</strong> · Durban, South Africa<br>
-  <strong>Open to relocation — Johannesburg &amp; Cape Town</strong> · Open to remote<br>
   React · Node.js · Python/Flask · PHP · MySQL · REST APIs · Linux<br>
   <em>Building production web applications end-to-end — relational schema design through deployment.</em>
 </p>
