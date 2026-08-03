@@ -75,6 +75,14 @@ South Africa.
 ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white)
 ![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)
 
+**Cloud** *(currently certifying — see below)*
+
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="32" alt="Microsoft Azure" title="Microsoft Azure">
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" height="32" alt="Amazon Web Services" title="Amazon Web Services">
+</p>
+
 ---
 
 ## Core Competencies
@@ -179,10 +187,24 @@ SOP processes, and SIM/router checkouts.
 🎓 **National Diploma in Computer Systems** — Durban University of Technology (2017 – 2021)
 📜 **Network Engineering** — Brainnest, Professional Certificate
 
-**In progress**
+### Cloud Certifications — In Progress
 
-![Azure](https://img.shields.io/badge/Azure%20Fundamentals%20%28AZ--900%29-Studying-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS%20Cloud%20Practitioner-Trained-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
+<table>
+  <tr>
+    <td align="center" width="220">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="48" alt="Microsoft Azure"><br><br>
+      <strong>Microsoft Azure Fundamentals</strong><br>
+      <sub>AZ-900</sub><br><br>
+      <img src="https://img.shields.io/badge/Studying-0078D4?style=flat-square" alt="Studying">
+    </td>
+    <td align="center" width="220">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" height="48" alt="Amazon Web Services"><br><br>
+      <strong>AWS Certified Cloud Practitioner</strong><br>
+      <sub>CLF-C02</sub><br><br>
+      <img src="https://img.shields.io/badge/Trained-FF9900?style=flat-square" alt="Trained">
+    </td>
+  </tr>
+</table>
 
 ---
 
