@@ -32,7 +32,8 @@ South Africa.
 - ⚡ My systems run in **live daily operations**: a distributed call centre platform, customer analytics dashboards, and field-ops tooling
 - 🔐 I build with security in mind — JWT auth, role-based access control, AES-256-GCM encryption at rest, CSRF protection, and full audit logging
 - 🛠️ I also run the IT infrastructure side: Active Directory, Microsoft 365, UniFi networks, VoIP, and Linux servers
-- 📚 Currently sharpening: TypeScript, system design, and performance engineering
+- ☁️ Currently studying for **Microsoft Azure Fundamentals (AZ-900)**, and completed training toward **AWS Certified Cloud Practitioner**
+- 📚 Also sharpening: TypeScript, system design, and performance engineering
 
 ---
 
@@ -126,10 +127,15 @@ RESTful APIs with JWT auth and RBAC throughout, and led the company's Wi-Fi netw
 
 ---
 
-## Education
+## Education & Certifications
 
 🎓 **National Diploma in Computer Systems** — Durban University of Technology (2017 – 2021)
 📜 **Network Engineering** — Brainnest, Professional Certificate
+
+**In progress**
+
+![Azure](https://img.shields.io/badge/Azure%20Fundamentals%20%28AZ--900%29-Studying-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS%20Cloud%20Practitioner-Trained-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
 
 ---
 
