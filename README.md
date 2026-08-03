@@ -1,7 +1,8 @@
 <h1 align="center">Sindi Ayanda Mthiyane</h1>
 
 <p align="center">
-  <strong>Full-Stack Developer</strong> · Durban, KwaZulu-Natal, South Africa<br>
+  <strong>Full-Stack Developer</strong> · Durban, South Africa<br>
+  <strong>Open to relocation — Johannesburg &amp; Cape Town</strong> · Open to remote<br>
   React · Node.js · Python/Flask · PHP · MySQL · REST APIs · Linux<br>
   <em>Building production web applications end-to-end — relational schema design through deployment.</em>
 </p>
@@ -227,3 +228,4 @@ I'm open to full-stack roles and interesting projects.
 | 💼 **LinkedIn** | [Sindi Mthiyane](https://linkedin.com/in/sindi-mthiyane-808678270) |
 | ✉️ **Email** | [sindiayanda30@gmail.com](mailto:sindiayanda30@gmail.com) |
 | 📍 **Location** | Durban, KwaZulu-Natal, South Africa |
+| 🚚 **Relocation** | Open to relocating to **Johannesburg** or **Cape Town** · open to remote |
