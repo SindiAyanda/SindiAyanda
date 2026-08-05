@@ -1328,6 +1328,12 @@ a.project-link-primary:hover {
     font-size: 0.84rem;
 }
 
+.footer-bottom .footer-privacy {
+    margin-top: 8px;
+    opacity: 0.75;
+    font-size: 0.78rem;
+}
+
 /* ===== Back to Top ===== */
 .back-to-top {
     position: fixed;
