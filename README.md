@@ -226,5 +226,4 @@ I'm open to full-stack roles and interesting projects.
 | 🌐 **Portfolio** | [sindi-mthiyane.vercel.app](https://sindi-mthiyane.vercel.app/) |
 | 💼 **LinkedIn** | [Sindi Mthiyane](https://linkedin.com/in/sindi-mthiyane-808678270) |
 | ✉️ **Email** | [sindiayanda30@gmail.com](mailto:sindiayanda30@gmail.com) |
-| 📍 **Location** | Durban, KwaZulu-Natal, South Africa |
-| 🚚 **Relocation** | Open to relocating to **Johannesburg** or **Cape Town** · open to remote |
+| 📍 **Location** | Durban, KwaZulu-Natal, South Africa
