@@ -275,8 +275,11 @@
                 padding: 36px 44px;
             }
             @page { margin: 0.4in 0; size: A4; }
-            .cv-entry { break-inside: avoid; }
-            .cv-project-entry { break-inside: avoid; }
+            /* Let long job entries flow across pages; keep headings with their content */
+            .cv-entry { break-inside: auto; }
+            .cv-section h2, .cv-entry-header, .cv-entry-company, .cv-entry-subtitle { break-after: avoid; }
+            .cv-entry li { break-inside: avoid; }
+            .cv-project-entry, .cv-edu-entry { break-inside: avoid; }
         }
 
         @media (max-width: 600px) {
